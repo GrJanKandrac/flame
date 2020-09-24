@@ -7,6 +7,7 @@
  - Remove Position class in favor of new Vector2 extension
  - Remove Box2D as a dependency
  - Use isRelative on effects
+ - Use Vector2 for position and size on PositionComponent
 
 ## 0.26.0
  - Improving Flame image auto cache

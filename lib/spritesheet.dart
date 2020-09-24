@@ -1,3 +1,4 @@
+import 'package:flame/extensions/vector2.dart';
 import 'package:meta/meta.dart';
 import 'sprite.dart';
 import 'sprite_animation.dart';
@@ -36,12 +37,11 @@ class SpriteSheet {
     int x,
     int y,
   ) {
+    Vector2 size = Vector2(textureWidth.toDouble(), textureHeight.toDouble());
     return Sprite(
       imageName,
-      x: (x * textureWidth).toDouble(),
-      y: (y * textureHeight).toDouble(),
-      width: textureWidth.toDouble(),
-      height: textureHeight.toDouble(),
+      position: Vector2(x.toDouble(), y.toDouble())..multiply(size),
+      size: size,
     );
   }
 
